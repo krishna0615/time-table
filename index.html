@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Student Timetable | Smart Alarm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">📚</div>
+      <h1>Student Timetable</h1>
+      <p>Plan your day. Achieve your goals.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Add a New Task</h2>
+      <form id="taskForm">
+        <label for="taskName">Task name</label>
+        <input id="taskName" type="text"
+          placeholder="e.g. Java practice" maxlength="100" required>
+
+        <label for="taskDate">Date</label>
+        <input id="taskDate" type="date" required>
+
+        <div class="time-grid">
+          <div>
+            <label for="startTime">Start time</label>
+            <input id="startTime" type="time" required>
+          </div>
+          <div>
+            <label for="endTime">End time</label>
+            <input id="endTime" type="time" required>
+          </div>
+        </div>
+
+        <button class="primary" type="submit">+ Add Task</button>
+      </form>
+
+      <button id="enableNotifications" class="secondary" type="button">
+        🔔 Enable Alarm Notifications
+      </button>
+      <p id="alarmStatus" class="status" aria-live="polite">
+        Enable notifications to receive reminders.
+      </p>
+    </section>
+
+    <section class="tasks-section">
+      <div class="tasks-heading">
+        <h2>My Timetable</h2>
+        <span id="taskCount">0 tasks</span>
+      </div>
+      <div id="taskList"></div>
+      <p id="emptyMessage" class="empty">
+        No tasks yet. Add your first task above!
+      </p>
+    </section>
+
+    <footer>Made for students ❤️</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

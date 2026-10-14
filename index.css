@@ -1,0 +1,199 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #1e293b;
+  background: #eef2ff;
+}
+
+body {
+  margin: 0;
+  padding: 24px 14px;
+}
+
+.app {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.logo {
+  font-size: 42px;
+}
+
+.header h1 {
+  color: #3730a3;
+  margin: 8px 0;
+}
+
+.header p {
+  color: #64748b;
+}
+
+.panel, .task {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 5px 20px #0f172a0a;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 15px 0 7px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font: inherit;
+  background: white;
+}
+
+input:focus {
+  outline: 2px solid #818cf8;
+  border-color: #4f46e5;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 12px 15px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary, .secondary {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.primary:hover {
+  background: #3730a3;
+}
+
+.secondary {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status {
+  font-size: 13px;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.tasks-section {
+  margin-top: 28px;
+}
+
+.tasks-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#taskCount {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.task {
+  margin-bottom: 12px;
+  box-shadow: none;
+}
+
+.task h3 {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.task p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-actions button {
+  font-size: 13px;
+  padding: 9px 12px;
+}
+
+.complete-btn {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.task.done {
+  opacity: 0.7;
+  border-color: #86efac;
+}
+
+.task.done h3 {
+  text-decoration: line-through;
+}
+
+.empty {
+  color: #64748b;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  margin: 30px 0 10px;
+}
+
+@media (max-width: 420px) {
+  .panel, .task {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+}
